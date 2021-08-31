@@ -1,8 +1,10 @@
 import pyttsx3
 import speech_recognition as sr
+import datetime
 import webbrowser
 import wikipedia
 import os
+import pyautogui
 
 assistant = pyttsx3.init('sapi5')
 voices = assistant.getProperty('voices')
@@ -34,21 +36,22 @@ def takecommand():
 
 
 def wishme():
-    Speak("Hello sir")
+    Speak("Hello Sir")
 
 def taskexe():
     while True:
-        query = takecommand()
+        if 1:
+         query = takecommand()
 
 #LITRETAURE
         if 'hello' in query:
-            Speak("hello sir, what are we going to do")
+            Speak("what are we going to do")
         
         elif 'hello edith' in query:
-            Speak("Hello sir, what should we do today.")
+            Speak("what should we do today.")
 
         elif 'hi' in query:
-            Speak("Hi Sir, what do you want to do today.")
+            Speak("what do you want to do today.")
 
         elif 'edith' in query:
             Speak("Yes Sir, any help")
@@ -122,7 +125,7 @@ def taskexe():
             webbrowser.open(web)
             Speak("found it!")
         
-        elif 'open opera' in query:
+        elif 'open browser' in query:
             Speak("ok Sir")
             web = "C:\\Users\\USER\\AppData\\Local\\Programs\\Opera GX\\launcher.exe"
             webbrowser.open(web)
@@ -167,11 +170,6 @@ def taskexe():
         elif 'open word' in query:
             npath = ('C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.exe')
             os.startfile(npath)
-            Speak("Opening word")
-
-        elif 'open CMD' in query:
-            os.system('open cmd')
-            Speak("Opening CMD")
 
         elif 'open premiere pro' in query:
             npath1 = ('C:\\Program Files\\Adobe\\Adobe Premiere Pro 2021\\Adobe Premiere Pro.exe')
@@ -187,13 +185,69 @@ def taskexe():
             npath3 = ("C:\\Program Files\\Adobe\\Adobe Audition 2021\\Adobe Audition.exe")
             os.startfile(npath3)
             Speak("Opening Audition")
+        
+        elif 'open excel' in query:
+            npath4 =  ("C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE")
+            os.startfile(npath4)
+            Speak("Opening Excel")
 
-        elif 'open powershell'in query:
-            os.system('open powershell')
-            Speak("Opening powershell")
+        elif 'open powerpoint' in query:
+            npath5 = ("C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE")
+            os.startfile(npath5)
+            Speak("Opening Powerpoint")
+
+        elif 'open publisher' in query:
+            npath6 = ("C:\\Program Files\\Microsoft Office\\root\\Office16\\MSPUB.EXE")
+            os.startfile(npath6)
+            Speak("Opening Publisher")
+
+        elif 'open access' in query:
+            npath7 = ("C:\\Program Files\\Microsoft Office\\root\\Office16\\MSACCESS.EXE")
+            os.startfile(npath7)
+            Speak("Opening Access")
+        
+        elif 'open pycharm' in query:
+            npath8 = ("C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.1.3\\bin\\pycharm64.exe")
+            os.startfile(npath8)
+            Speak("Opening Pycharm")
+
+        elif 'open rider' in query:
+            npath9 = ("C:\\Program Files\\JetBrains\\JetBrains Rider 2021.1.1\\bin\\rider64.exe")
+            os.starfile(npath9) 
+            Speak("Opening Rider")
+
+        elif 'open VS code ' in query:
+            npath10 = ("C:\\Users\\USER\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
+            os.startfile(npath10)
+            Speak("Opening VS Code")
+
+        elif 'open google' in query:
+            npath11 = ("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
+            os.startfile(npath11)
+            Speak("Opening Google")
+
+
+        elif 'open edge' in query:
+            npath12 = ("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe")
+            os.startfile(npath12)
+            Speak("Opening edge")
+
+        elif 'open command prompt' in query:
+            os.system("start cmd")
+            Speak("Opening Cmd")
+
+        elif 'open powershell' in query:
+            os.system("start powershell")
+            Speak("Opening Powershell")
+
+        elif 'calculator' in query:
+            path13 = ('C:\\Windows\\System32\\calc.exe')
+            os.startfile(path13)
+            Speak("Opening Calculator")
+
+#SCREENSHOT
+
 
 wishme()
-takecommand()
 taskexe()
-    
-    
+takecommand()    
